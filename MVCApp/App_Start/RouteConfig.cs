@@ -16,13 +16,13 @@ namespace MVCApp
             routes.MapRoute(
                 name: "NoId",
                 url: "{controller}/{action}",
-                defaults: new { controller = "Home", action = "Index", id = 23 }
+                defaults: new { controller = "Songs", action = "Index", id = 23 }
             );
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Songs", action = "Index", id = UrlParameter.Optional }
             );
 
         }

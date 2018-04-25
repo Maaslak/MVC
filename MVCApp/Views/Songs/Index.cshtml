@@ -1,8 +1,14 @@
-﻿@model MVCApp.Models.Song
-@{
+﻿@model IEnumerable<MVCApp.Models.Song>
 
-    ViewBag.Title = Model.Name;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@Html.Partial("_SongsList", Model)
